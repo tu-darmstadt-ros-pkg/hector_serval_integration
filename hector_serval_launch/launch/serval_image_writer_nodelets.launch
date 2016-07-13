@@ -16,7 +16,7 @@
   </include>
   
   <include file="$(find image_to_serval)/launch/image_to_serval_nodelet.launch">
-    <arg name="nodelet_manager_name" default="arm_rgbd_cam_nodelet_manager" />
+    <arg name="nodelet_manager_name" default="/arm_rgbd_cam/arm_rgbd_cam_nodelet_manager" />
     <arg name="image_topic" value="/arm_rgbd_cam/rgb/image_raw" /> 
     <arg name="trigger_topic" value="$(arg trigger_topic)" />   
     <arg name="save_folder" value="$(arg save_folder)" />   
