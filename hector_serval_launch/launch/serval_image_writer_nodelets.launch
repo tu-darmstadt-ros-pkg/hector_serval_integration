@@ -4,15 +4,19 @@
   
   <arg name="trigger_topic" default="default" />   
   <arg name="save_folder" default="/tmp" />   
-  <arg name="scripts_folder" default="/home/hector/serval_scripts/servald-helpers" />
+  <arg name="scripts_folder" default="/home/taurob/serval/servald-helpers" />
+  <arg name="add_script_executable_name" default="/s_addallfiles " />
+  
+  
     
   <include file="$(find image_to_serval)/launch/image_to_serval_nodelet.launch">
     <arg name="node_name" default="arm_thermal_cam_serval_loader" />   
     <arg name="nodelet_manager_name" default="arm_thermal_cam_nodelet_manager" />
     <arg name="image_topic" value="/arm_thermal_cam/image_raw" /> 
     <arg name="trigger_topic" value="$(arg trigger_topic)" />
-    <arg name="save_folder" value="$(arg save_folder)" />   
+    <arg name="save_folder" value="$(arg save_folder)" />
     <arg name="scripts_folder" value="$(arg scripts_folder)" />
+    <arg name="add_script_executable_name" value="$(arg add_script_executable_name)" />
     <arg name="image_name" value="image_thermal.jpg" />
   </include>
   
@@ -23,6 +27,7 @@
     <arg name="trigger_topic" value="$(arg trigger_topic)" />   
     <arg name="save_folder" value="$(arg save_folder)" />   
     <arg name="scripts_folder" value="$(arg scripts_folder)" />
+    <arg name="add_script_executable_name" value="$(arg add_script_executable_name)" />
     <arg name="image_name" value="image_color.jpg" />
   </include>
 
