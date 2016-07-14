@@ -12,7 +12,7 @@
   <include file="$(find image_to_serval)/launch/image_to_serval_nodelet.launch">
     <arg name="node_name" default="arm_thermal_cam_serval_loader" />   
     <arg name="nodelet_manager_name" default="arm_thermal_cam_nodelet_manager" />
-    <arg name="image_topic" value="/arm_thermal_cam/image_raw" /> 
+    <arg name="image_topic" value="/arm_thermal_cam/image_converted" /> 
     <arg name="trigger_topic" value="$(arg trigger_topic)" />
     <arg name="save_folder" value="$(arg save_folder)" />
     <arg name="scripts_folder" value="$(arg scripts_folder)" />
